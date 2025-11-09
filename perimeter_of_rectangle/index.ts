@@ -1,4 +1,4 @@
-// Mencari Keliling persegi
+// Mencari Keliling persegi panjang
 // input: lenght = 5, width = 3
 // proces: perimeter = 2 x (5+3) = 2 x 8
 // output: 16
