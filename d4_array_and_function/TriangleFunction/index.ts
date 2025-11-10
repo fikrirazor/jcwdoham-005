@@ -5,7 +5,8 @@ function triangle(height:number){
         baris = baris + j + ' ';
     }
     console.log(baris);
+    }
 }
-}
+
 let height:number = 8;
 triangle(8);
