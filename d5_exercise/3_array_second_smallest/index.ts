@@ -3,11 +3,11 @@
 // output : 2
 
 function secondSmallestFinder(arrayNumber: Array<number>) {
-  numbers.sort();
+  arrayNumber.sort();
   let theSmallest: number;
-  for (let i = 0; i <= numbers.length; i++) {
+  for (let i = 0; i <= arrayNumber.length; i++) {
     if (i == 1) {
-      theSmallest = numbers[i];
+      theSmallest = arrayNumber[i];
     }
   }
   return theSmallest;
