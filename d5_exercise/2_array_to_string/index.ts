@@ -1,4 +1,4 @@
-function convertArrayToString(arrayWord){
+function convertArrayToString(arrayWord:Array<string>){
     let outputWord = "";
     for(let word = 0; word < arrayWord.length; word++){
         
