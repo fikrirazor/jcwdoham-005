@@ -2,36 +2,49 @@
 
 // With Sort
 
+function getLHAwithSort(arrayNumber: Array<number>){
+    let l = arrayNumber.length;
+    const sortedArray = arrayNumber.sort((a, b) => a - b);
+    let lowest = sortedArray[0];
+    let highest = sortedArray[l - 1];
+    let sum = 0;
+    for (let i = 0; i < l; i++) {
+        sum += arrayNumber[i];
+    }
+    let average = sum / l;
+    console.log(`Dengan Sort : {lowest: ${lowest}, highest: ${highest}, average: ${average}}`);
+}
+
 // Without Sort
 function getLowestHighestAverage(arrayNumber: Array<number>) {
-  let lowest = 0;
-  let highest = 0;
-  let avarage = 0;
-  let new_arr = [];
-  let l = arrayNumber.length;
-  
-  let sum = 0;
-  for (let i = 0; i <= l; i++) {
-    if (i != l) {
-      sum += arrayNumber[i];
+    let lowest:number = arrayNumber[0];
+    let highest:number = arrayNumber[0];
+    let sum:number = 0;
+    let l:number = arrayNumber.length;
+    let average:number = 0;
+    for (let i = 0; i < l; i++) {
+        sum += arrayNumber[i];
+        
+        if (arrayNumber[i] < lowest) {
+            lowest = arrayNumber[i];
+        }
+        
+        if (arrayNumber[i] > highest) {
+            highest = arrayNumber[i];
+        }
     }
-    // sort array
-    for (let j = 0; j <=l; j++) {
-      if (arrayNumber[i] < arrayNumber[j]) {
-        new_arr = arrayNumber[i];
-        arrayNumber[i] = arrayNumber[j];
-        arrayNumber[j] = new_arr;
-      }
-      lowest = arrayNumber[0];
-      highest = arrayNumber[l - 1];
-      avarage = sum / l;
-    }
-  }
-  return { lowest, highest, avarage };
+    average = sum / l;
+    console.log(`Tanpa Sort : {lowest: ${lowest}, highest: ${highest}, average: ${average}}`);
 }
+
+
+let arrb = [12, 5, 23, 18, 4, 45, 32];
+getLHAwithSort(arrb);
 
 // output : {lowest : 4, highest: 45, average: 19.8xxx}
 let arr = [12, 5, 23, 18, 4, 45, 32];
 
-let { lowest, highest, avarage } = getLowestHighestAverage(arr);
-console.log(`{lowest: ${lowest}, highest: ${highest}, average: ${avarage}}`);
+getLowestHighestAverage(arr);
+
+
+
