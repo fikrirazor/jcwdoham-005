@@ -1,5 +1,5 @@
 function convertArrayToString(arrayWord:Array<string>){
-    let outputWord = "";
+    let outputWord:string = "";
     for(let word = 0; word < arrayWord.length; word++){
         
         if(word == arrayWord.length - 1){

@@ -6,10 +6,10 @@ b. Example : arr = [1, 2, 3, 4], newElement = 7 → [1, 2, 3, 4, 7]
  */
 
 function addValueToArray(arr, newElement) {
-  let isAvailable = false;
+  let isAvailable:boolean = false;
   // Melakukan looping untuk mengecek apakah
   // element baru ada atau tidak
-  for (let i = 0; i < arr.length; i++) {
+  for (let i:number = 0; i < arr.length; i++) {
     //console.log(isAvailable); //cek iterasi
     if (arr[i] == newElement) {
       isAvailable = true;
@@ -29,7 +29,7 @@ function addValueToArray(arr, newElement) {
 
 let arr = [1, 2, 3, 4];
 
-let newElement = 7;
+let newElement:number = 7;
 
 
 console.log(addValueToArray(arr,newElement));
