@@ -3,15 +3,15 @@
 // With Sort
 
 function getLHAwithSort(arrayNumber: Array<number>){
-    let l = arrayNumber.length;
+    let l:number = arrayNumber.length;
     const sortedArray = arrayNumber.sort((a, b) => a - b);
-    let lowest = sortedArray[0];
-    let highest = sortedArray[l - 1];
-    let sum = 0;
+    let lowest:number = sortedArray[0];
+    let highest:number = sortedArray[l - 1];
+    let sum:number = 0;
     for (let i = 0; i < l; i++) {
         sum += arrayNumber[i];
     }
-    let average = sum / l;
+    let average:number = sum / l;
     console.log(`Dengan Sort : {lowest: ${lowest}, highest: ${highest}, average: ${average}}`);
 }
 
